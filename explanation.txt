@@ -1,0 +1,9 @@
+This Python program uses OpenCV and MediaPipe to detect and track hands using the computer's webcam. First, OpenCV opens the webcam and captures video frames. Each frame is converted from BGR to RGB so that MediaPipe can process it. MediaPipe Hands detects up to two hands and identifies 21 landmarks on each hand, including the fingertips and finger joints. The program also detects whether the hand is a left or right hand, which helps it correctly detect the thumb position.
+
+The positions of the fingertips are compared with the positions of the finger joints to determine whether each finger is open or closed. A value of 1 represents an open finger, while 0 represents a closed finger. The program then counts all the open fingers from both hands and displays the total number on the webcam screen. MediaPipe also draws the hand landmarks and connections on the detected hands.
+
+The program continuously processes the webcam frames and updates the finger count in real time.
+
+Working Flow
+
+Webcam → Capture Frame → Detect Hand → Find Landmarks → Check Finger Positions → Count Fingers → Display Result
